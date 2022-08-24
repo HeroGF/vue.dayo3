@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 1.用promise实现一个暂停函数(笔试原题)
+        function sleep(timer) {
+            return new Promise((resolve) => {
+                setTimeout(resolve, timer)
+            })
+        }
+
+        async function main() {
+            await sleep(3000)
+            console.log('你好');
+        }
+
+        main() // 延迟三秒打印你好
+
+
+        // 2.将一个数组 扩大100倍, 求和
+        function sum(arr) {
+            if (arr.length === 0) return alert('请输入有效数组')
+            return arr.reduce((pre, cur, index, arr) => {
+                return pre = pre + 100 * cur
+            }, 0)
+        }
+
+        console.log(sum([1, 2, 3]));
+        console.log(sum([]));
+
+        // [1,2,3] ==> [100,200,300] ==> 求和
+
+        // 3.红绿灯
+
+    </script>
+</body>
+
+</html>
